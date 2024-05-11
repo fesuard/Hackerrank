@@ -1,0 +1,28 @@
+https://www.hackerrank.com/challenges/re-start-re-end/submissions/code/353854332
+These expressions return the indices of the start and end of the substring matched by the group.
+
+Code
+>>> import re
+>>> m = re.search(r'\d+','1234')
+>>> m.end()
+4
+>>> m.start()
+0
+Task
+You are given a string .
+Your task is to find the indices of the start and end of string k in S.
+
+import re
+S = str(input())
+k = str(input())
+matches = re.finditer(f'(?={k})', S)
+start_index = []
+stop_index = []
+for match in matches:
+    start_index.append(match.start())
+    stop_index.append(match.start() + len(k) - 1)
+if len(start_index) > 0:
+    for i in range(len(start_index)):
+        print((start_index[i], stop_index[i]))
+else:
+    print((-1, -1))
