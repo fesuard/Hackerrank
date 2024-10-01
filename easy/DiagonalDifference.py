@@ -1,14 +1,12 @@
-https://www.hackerrank.com/challenges/diagonal-difference/problem
-Given a square matrix, calculate the absolute difference between the sums of its diagonals.
-For example, the square matrix arr is shown below:
-1 2 3
-4 5 6
-9 8 9  
-Function description
-diagonalDifference takes the following parameter:
-int arr[n][m]: an array of integers
-Return
-int: the absolute diagonal difference
+# https://www.hackerrank.com/challenges/diagonal-difference/problem
+# Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+# For example, the square matrix arr is shown below:
+import math
+import os
+import random
+import re
+import sys
+
 
 def diagonalDifference(arr):
     d1 = []
