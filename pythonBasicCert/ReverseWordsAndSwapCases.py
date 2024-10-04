@@ -3,6 +3,7 @@
 # letters in the original string are swapped, i.e. lowercase letters become uppercase and 
 # uppercase letters become lowercase
 
+
 def reverse_words_order_and_swap_cases(sentence):
     string_lst = sentence.split(' ')
     reverse_lst = string_lst[::-1]
@@ -16,3 +17,4 @@ def reverse_words_order_and_swap_cases(sentence):
                 word_reverse += letter.upper()
         res_lst.append(word_reverse)
     return ' '.join(res_lst)
+    
