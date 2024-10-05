@@ -3,7 +3,6 @@
 # At the beginning of the second day, 5//2 * 3 people receive the advertisement. Each day, recipients//2 of the recipients 
 # like the advertisement and will share it with 3 friends on the following day. Assuming nobody receives the advertisement 
 # twice, determine how many people have liked the ad by the end of a given day, beginning with launch day as day 1.
-
 import math
 import os
 import random
@@ -18,6 +17,7 @@ def viralAdvertising(n):
         shared = shared // 2 * 3
         liked += shared // 2
     return liked
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
