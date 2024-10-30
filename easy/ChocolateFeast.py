@@ -1,8 +1,8 @@
-https://www.hackerrank.com/challenges/chocolate-feast/problem
-They are having a promotion at a store. If Bobby saves enough wrappers, he can turn them in 
-for a free chocolate. Example, if you have 15 to spend, chocolates costs 4, and you get a 
-chocolate free for 3 wrappers, you buy 3, and exchange the 3 wrappers for another chocolate,
-so you eat a total of 4. How many chocolates can he eat?
+# https://www.hackerrank.com/challenges/chocolate-feast/problem
+# They are having a promotion at a store. If Bobby saves enough wrappers, he can turn them in 
+# for a free chocolate. Example, if you have 15 to spend, chocolates costs 4, and you get a 
+# chocolate free for 3 wrappers, you buy 3, and exchange the 3 wrappers for another chocolate,
+# so you eat a total of 4. How many chocolates can he eat?
 import math
 import os
 import random
