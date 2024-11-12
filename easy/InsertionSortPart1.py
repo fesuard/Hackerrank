@@ -13,27 +13,17 @@ import sys
 
 
 def insertionSort1(n, arr):
-    elem = 0
+    key = arr[-1]
+    i = n - 1
     
-    for i in range(n-1, -1, -1):
-        if i == n-1:
-            elem = arr[i]
-            
-        if i == 0:
-            arr[i] = elem
-            print(*arr)
-            break
+    while i > 0 and arr[i-1] > key:
+        arr[i] = arr[i-1]
+        i -= 1
+        print(*arr)
         
-        if elem < arr[i-1]:
-            arr[i] = arr[i-1]
-            print(*arr)
-        
-        else:
-            arr[i] = elem
-            print(*arr)
-            break
-            
-        
+    arr[i] = key
+    print(*arr)
+
 if __name__ == '__main__':
     n = int(input().strip())
 
