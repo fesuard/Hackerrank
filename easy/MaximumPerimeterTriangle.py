@@ -18,19 +18,12 @@ import sys
 def maximumPerimeterTriangle(sticks):
     n = len(sticks)
     sticks.sort()
-    valid_triangles = []
     
-    for i in range(n - 2):
-        for j in range(i+1, n-1):
-            for k in range(j+1, n):
-                if sticks[i] + sticks[j] > sticks[k]:
-                    valid_triangles.append([sticks[i], sticks[j], sticks[k]])
+    for i in range(n-1, 1, -1):
+        if sticks[i] < sticks[i-1] + sticks[i-2]:
+            return [sticks[i-2], sticks[i-1], sticks[i]]
     
-    
-    if valid_triangles:
-        return max(valid_triangles)
-    else:
-        return [-1]
+    return [-1]
         
 
 if __name__ == '__main__':
