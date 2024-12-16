@@ -13,6 +13,8 @@ import re
 import sys
 
 
+# brute force, having a list with all the lengths div by 5 and by 3, and check which
+# comination is equal to n.
 def decentNumber(n):
     if n < 3:
         return -1
@@ -33,8 +35,21 @@ def decentNumber(n):
         return '3' * n
         
     return -1
+
+
+# greedy approach
+def decentNumber1(n):
+    m = n
     
+    while m % 3 != 0:
+        m -= 5
+        
+    if m < 0:
+        return -1
     
+    return '5' * m + '3' * (n - m)
+
+
 if __name__ == '__main__':
     t = int(input().strip())
 
